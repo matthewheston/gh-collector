@@ -171,14 +171,14 @@ function checkLimit(data) {
 
 function initDb() {
   connection = mysql.createConnection({
-    host     : config.mysql_host,
-             user     : config.mysql_username,
-             password : config.mysql_password,
-             database : config.mysql_db
+    host: config.mysql_host,
+    user: config.mysql_username,
+    password: config.mysql_password,
+    database: config.mysql_db
   });
+  connection.connect();
 }
 
-connection.connect();
 
 function initGithub() {
   github = new GitHubApi({
